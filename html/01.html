@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 01</title>
+</head>
+<body>
+
+    <!--Crie uma pagina html com uma imagem usando a tag html.
+         Adicione atributos personalizados à imagem e utilize o 
+         javascript para exibir um alerta com o valor desses atributos
+          ao passar o mouse sobre a imagem-->
+   
+  <img id="myImg" alt="Arvore da Vida" atributo="meuAtributo1" atributo2=" meuAtributo2" src="https://img.freepik.com/fotos-premium/bela-arvore-da-vida-simbolo-sagrado-individualidade-prosperidade-e-conceito-de-crescimento-ilustracao-3d_598586-1030.jpg?w=2000" width="200px;" alt="Minha Figura">
+
+  <script>
+    var image = document.querySelector("#myImg");
+    image.addEventListener("mouseover",function() {
+      var atributo1 = image.getAttribute("atributo");
+      var atributo2 = image.getAttribute("atributo2");
+
+      alert("Atributo 1: " + atributo1 + "\nAtributo 2: " + atributo2);
+    })
+  </script>
+
+</body>
+</html>

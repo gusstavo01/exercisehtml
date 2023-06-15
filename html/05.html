@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 05</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+       
+    </style>
+</head>
+<body>
+
+    <!--  CRIE UMA PAGINA CONTENDO UM FORMULÁRIO COMPLEXO CONTEDO CAMPOS DE ENTRADA DE TEXTO, CAIXAS DE SELEÇÃO
+    , BOTÕES DE OPÇÃO DE SELEÇÃO MULTIPLA. UTILIZE JAVASCRIPT PARA OS CAMPOS DO FORMULÁRIO ANTES DE NVIAR
+
+OS DADOS-->
+        
+<form onsubmit="return validarFormulario()">
+    <label for="nome">Nome:</label>
+  <input type="text" name="" id="nome" required>
+
+  <br>
+
+  <label for="email">Email:</label>
+  <input type="email" name="" id="email" required> 
+  
+  <br>
+ <label for="pais">País:</label>
+ <select name="" id="pais" required> 
+    <option value="">Selecione um pais</option>
+    <option value="brasil">Brasil</option>
+    <option value="eua">Estados Unidos</option>
+    <option value="canada">Canadá</option>
+ </select><br><br>
+ <label for="comidas">Comidas:</label><br>
+ <input type="checkbox" name="comidas[]"  value="pizza"> Pizza <br>
+ <input type="checkbox" name="comidas[]"  value="sushi"> Sushi <br>
+ <input type="checkbox" name="comidas[]"  value="hamburguer"> Hambúrguer <br>
+ <input type="checkbox" name="comidas[]"  value="lasanha"> Lasanha <br>
+
+ <input type="submit" value="Enviar!" style="width:100px; padding:2px; margin-left: 3px;">
+ 
+
+</form>
+
+<script>
+    function validarFormulario() {
+        var nome = document.querySelector("#nome").value;
+        var email = document.querySelector("#email").value;
+        var pais = document.querySelector("#pais").value;
+        var comidas = document.querySelectorAll("input[name='comidas[]']:checked");
+
+
+        if(nome === "" || email === "" || pais === "" || comidas.length === 0) {
+            alert("Por favor, preencha todos os campos obrigatórios.")
+            return false;
+        }
+
+        alert("Formulário enviado com sucesso!")
+        return true;
+    }
+</script>
+
+     
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 09</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        header {
+            background-image: url('banner.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+    }
+
+    .parallax-content {
+      transform: translateY(-50%);
+    }
+
+    
+        .conteudo {
+            padding: 20px 2%;
+        }
+        .box {
+            display: inline-block;
+            width: 50%;
+            background-color: bisque;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+            
+        }
+        footer {
+                background-color: blanchedalmond;
+                padding: 20px 2%;
+                height: 60px;
+                text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!--  CRIE UMA PAGINA HTML COM UM CABEÇALHO HEADER, E UM RODAPE. UTILZIE O CSS PARA CRIAR UM EFEITO PARALLAXNO CABEÇALHO EM QUE O CONTEUDO SE 
+    MOVE EM DIFERENTES VELOCIDADES AO ROALR A PAGINA -->
+    
+        <header class="">
+            <div class="parallax-content">
+                <h1>PARALLAX</h1>
+                <p>Meu efeito parallax</p>
+            </div>
+        </header>
+
+        <div class="conteudo">
+            <h1>MEU TITULO DE EXEMPLO</h1>
+            <div class="box"> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam vitae sit dicta illo accusantium, molestiae repudiandae rem laborum cupiditate vel aliquam distinctio? Culpa a commodi doloremque, magni itaque iste?</p>
+            </div>
+            <div class="box"> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam vitae sit dicta illo accusantium, molestiae repudiandae rem laborum cupiditate vel aliquam distinctio? Culpa a commodi doloremque, magni itaque iste?</p>
+            </div>
+            <div class="box"> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam vitae sit dicta illo accusantium, molestiae repudiandae rem laborum cupiditate vel aliquam distinctio? Culpa a commodi doloremque, magni itaque iste?</p>
+            </div>
+        </div>
+
+        <footer> 
+            <p>&copy; Gustavo Aguiar - Starter +</p>
+        </footer>
+</body>
+</html>

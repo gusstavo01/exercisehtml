@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        
+        .container{
+            max-width: 1250px;
+            margin: 20px auto;
+        }
+        .changeTitle {
+            background-color:#ffb74d ;
+            height: 300px;
+           
+        }
+        .changeTitle h1 {
+            padding: 10px;
+            color: #616161  ;
+            text-align: center;
+            font-weight: 300;
+        }
+        .myForms {
+            margin: 20px auto; 
+            display: flex;
+            justify-content: center;
+            
+        }
+        .myForms form {
+            text-align: center; /* Adicionado para centralizar na horizontal */
+        }
+     .myForms form input[type=text] {
+        width: 250px;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+         outline: none;
+         display: block;
+         color:#bdbdbd ;
+     }
+     .myForms form input[type=submit] {
+        margin-top: 20px;
+        margin-left: 50px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        border: none;
+         outline: none;
+         display: block;
+         cursor: pointer;
+     }
+     .myForms form input[type=submit]:hover {
+        background-color: #e0e0e0;
+     }
+     
+        
+    </style>
+</head>
+<body>
+
+    <!--  Crie uma pagina HTML COM DOCTYPE DEFINIDO, ADICIONE UM SEÇÃO  HEAD, UM ELEMENTO MAIN PARA O CONTEUDO PRINCIPAL  E O ELEMENTO BODY PARA O CORPO DA PAGINA
+    . UTILIZE JAVASCRIPT PARA ALTERAR DINAMICAMENTE O TITULO DA PAGINA COM BASE EM AÇOES DO USUARIO -->
+        <main class="">
+            <div class="container">
+                <div class="changeTitle">
+                    <h1>Change Your Title</h1>
+                    <div class="myForms">
+                        <form action="">
+                        <input type="text" id="newTitle">
+                        <input type="submit" id="btnSend" value="Send">
+                    </form>
+                   </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            function changeValueTittle() {
+                var value = document.getElementById("newTitle").value;
+                document.title = value;
+            }
+            document.getElementById("btnSend").addEventListener("click",function() {
+                event.preventDefault();
+                changeValueTittle();
+            })
+        </script>
+    
+
+</body>
+</html>
